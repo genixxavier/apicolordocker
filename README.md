@@ -1,0 +1,107 @@
+# Color API
+
+Tecnologías utilizadas: Node, Express, Mysql, Squalize.
+
+## Installation
+
+Use npm.
+
+```bash
+npm install
+```
+
+Crear base de datos "colors" o usar comando.
+
+```bash
+npm sequalize-cli db:create
+```
+
+Configurar archivo de base de datos
+
+```json
+# config/config.json
+"development": {
+    "username": "user",
+    "password": "password",
+    "database": "colors",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+}
+```
+
+Correr migrations y seed.
+
+```bash
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+```
+
+RCorrer proyecto.
+
+```bash
+npm run start
+ó
+npm run dev
+```
+
+URL: [http://localhost:3000/](http://localhost:3000/)
+
+## Enpoints
+
+GET api/colors?page=0&size=5
+
+Params: size = Cantidad de items a traer
+
+```json
+# api/colores?page=0&size=5
+{
+    "totalItems": 18,
+    "totalPages": 4,
+    "currentPage": 0,
+    "colors": [
+        {
+            "id": 1,
+            "name": "cerulean",
+            "color": "#98B2D1",
+            "pantone_value": "15-4020",
+            "year": 2000,
+            "createdAt": "2021-11-27T04:33:20.000Z",
+            "updatedAt": "2021-11-27T04:33:20.000Z"
+        },
+        ...
+     ]
+}
+```
+
+GET api/colors/:id
+
+```json
+# api/colors/:id
+{
+  "id": 1,
+  "name": "cerulean",
+  "color": "#98B2D1",
+  "pantone_value": "15-4020",
+  "year": 2000,
+  "createdAt": "2021-11-27T04:33:20.000Z",
+  "updatedAt": "2021-11-27T04:33:20.000Z"
+}
+```
+
+POST api/colors/create
+
+```json
+# api/colors/create
+# body
+{
+  "name": "cerulean",
+  "color": "#98B2D1",
+  "pantone_value": "15-4020",
+  "year": 2000
+}
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+[gnxcode](https://gnxcode.dev/)
