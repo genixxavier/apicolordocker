@@ -45,7 +45,12 @@ router.get('/:id', async (req,res, next) => {
         }
     })
 
-    if(!color) return res.status(404).send('Id color no fount')
+    if(!color) return res.status(404).send({
+        "error": {
+          "code": 404,
+          "message": "ID not found"
+        }
+    })
     res.status(200).send(color)
 })
 

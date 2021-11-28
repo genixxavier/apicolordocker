@@ -101,6 +101,16 @@ POST api/colors/create
 }
 ```
 
+## DEMO
+
+Use heroku and cleardb
+
+GET colores = [https://apicolors.herokuapp.com/api/colores?page=0&size=10](https://apicolors.herokuapp.com/api/colores?page=0&size=10)
+
+GET colorId = [https://apicolors.herokuapp.com/api/colores/5](https://apicolors.herokuapp.com/api/colores/5)
+
+POST create color = [https://apicolors.herokuapp.com/api/colores/create](https://apicolors.herokuapp.com/api/colores/create)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
