@@ -10,10 +10,10 @@ Use npm.
 npm install
 ```
 
-Crear base de datos "colors" o usar comando.
+Levantar base de datos mysql.
 
 ```bash
-npm sequalize-cli db:create
+docker-compose up -d
 ```
 
 Configurar archivo de base de datos
@@ -21,11 +21,12 @@ Configurar archivo de base de datos
 ```json
 # config/config.json
 "development": {
-    "username": "user",
-    "password": "password",
+    "username": "root",
+    "password": "123456",
     "database": "colors",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 6161
 }
 ```
 
