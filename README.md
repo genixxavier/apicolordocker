@@ -104,7 +104,7 @@ POST api/colors/create
 
 ## DEMO
 
-Repositorio = [hhttps://github.com/genixxavier/apicolordocker](https://github.com/genixxavier/apicolordocker)
+Repositorio = [https://github.com/genixxavier/apicolordocker](https://github.com/genixxavier/apicolordocker)
 
 Use heroku and cleardb
 
